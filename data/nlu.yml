@@ -1,0 +1,498 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - good afternoon
+    - hi there
+    - greetings
+    - hey there
+    - howdy
+    - nice to meet you
+    - pleasure to meet you
+    - hi good morning
+    - hello how are you
+    - hey how's it going
+    - hi there nice to meet you
+    - good day
+    - greetings and salutations
+    - morning
+    - evening
+    - afternoon
+    - hello good morning
+    - hello good evening
+    - hello good afternoon
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later
+    - good bye
+    - bye bye
+    - see you
+    - goodbye for now
+    - farewell
+    - have a good day
+    - until next time
+    - take care
+    - catch you later
+    - bye for now
+    - got to go
+    - time to go
+    - see you soon
+    - have a nice day
+    - nice talking to you
+    - thank you for your time
+    - thanks for the interview
+    - looking forward to hearing from you
+    - thanks for considering me
+    - appreciate your time
+    - thank you for the opportunity
+    - have a great day ahead
+    - bye and thank you
+    - thanks and goodbye
+
+- intent: provide_name
+  examples: |
+    - My name is [John](name)
+    - I'm [Maria](name)
+    - I'm [Kostas](name)
+    - My name is [Kostas](name)
+    - [Kostas](name) here
+    - This is [Kostas](name)
+    - I'm [Nikos](name)
+    - I'm [Dimitris](name)
+    - This is [Alex](name)
+    - [George](name) here
+    - I'm [Christina](name)
+    - [Michael](name)
+    - Hello, I'm [Sofia](name)
+    - [Nick](name) speaking
+    - You can call me [Anna](name)
+    - Hi, I am [David](name)
+    - My name's [Elena](name)
+    - [Peter](name) here for the interview
+    - This is [Katerina](name) speaking
+    - [Alexandros](name) speaking
+    - I go by [Tom](name)
+    - Please call me [Sarah](name)
+    - Hello, this is [James](name)
+    - [Emma](name) here for the interview
+    - My name is [Daniel](name) and I'm here for the interview
+    - This is [Lisa](name) calling
+    - [Robert](name) speaking with you
+    - Hi there, I'm [Julia](name)
+    - [Andrew](name) joining for the interview
+    - You're speaking with [Michelle](name)
+    - [Christopher](name) present for the interview
+    - [Jessica](name) here to discuss the position
+
+- intent: mood_great
+  examples: |
+    - I'm feeling great
+    - I'm doing very well
+    - I feel excellent
+    - I'm good
+    - feeling wonderful
+    - I'm feeling confident
+    - doing really good
+    - excited about this opportunity
+    - feeling ready
+    - I'm feeling optimistic
+    - perfect
+    - very excited
+    - feeling prepared
+    - eager to begin
+    - looking forward to this
+    - I'm doing fantastic
+    - feeling positive
+    - I'm in a great mood
+    - couldn't be better
+    - feeling energetic
+    - really looking forward to our discussion
+    - I'm ready and excited
+    - feeling quite confident
+    - I'm prepared and enthusiastic
+    - excited to share my experience
+    - feeling motivated
+    - really happy to be here
+    - feeling great about this opportunity
+    - I'm in high spirits
+    - ready to give it my best
+
+- intent: mood_unhappy
+  examples: |
+    - I'm nervous
+    - feeling a bit anxious
+    - somewhat stressed
+    - I'm a little nervous
+    - feeling anxious about the interview
+    - bit worried
+    - not feeling my best
+    - quite nervous actually
+    - stressed about this
+    - interview anxiety
+    - feeling tense
+    - bit overwhelmed
+    - slightly apprehensive
+    - got butterflies in my stomach
+    - feeling under pressure
+    - a little worried
+    - kind of stressed out
+    - my nerves are getting to me
+    - feeling jittery
+    - trying to calm my nerves
+    - honestly quite nervous
+    - dealing with some anxiety
+    - feeling intimidated
+    - not very confident right now
+    - worried about performing well
+    - experiencing some tension
+    - feeling uncertain
+    - bit scared about the interview
+    - my heart is racing
+    - feeling the pressure
+
+- intent: affirm
+  examples: |
+    - Yes, that location works for me
+    - Yes, that works perfectly
+    - Yes, I'm okay with that location
+    - Yes, the location is fine for me
+    - Yes, that’s a great location for me
+    - Yes, I’m happy with that location
+    - Yes, absolutely, the location is good for me
+    - Yes, the location works perfectly for me
+    - Yes, I can work from that location
+    - Yes, the location is suitable for me
+    - Yes, I’m comfortable with that location
+    - Yes, that location is fine
+    - Yes, I can easily commute to that location
+    - Yes, the location is convenient for me
+    - Yes, I have no issues with that location
+    - Yes
+    - Yes, the location is fine
+    - That works
+    - Yes, that works
+
+- intent: provide_education_info
+  examples: |
+    - I studied at [National Technical University of Athens](university_name)
+    - I graduated from [University of Patras](university_name)
+    - I went to [Athens University of Economics and Business](university_name)
+    - My degree is from [University of Crete](university_name)
+    - I did my [Computer Science](study_program) at [Aristotle University](university_name)
+    - I have a degree in [Machine Learning](study_program)
+    - I studied [Electrical Engineering](study_program)
+    - My major was [Computer Engineering](study_program)
+    - I completed my [Data Science](study_program) degree
+    - [Artificial Intelligence](study_program) graduate
+    - Bachelor's in [Computer Science](study_program) from [University of Thessaloniki](university_name)
+    - MSc in [Machine Learning](study_program)
+    - Specialized in [Natural Language Processing](study_program)
+    - I hold a degree in [Computer Engineering](study_program)
+    - My bachelor's is in [Software Engineering](study_program)
+    - I studied [Data Analytics](study_program) at [Stanford University](university_name)
+    - Completed my [Information Technology](study_program) degree at [MIT](university_name)
+    - Did my master's in [AI](study_program)
+    - Graduated with a [Computer Science](study_program) degree
+    - My PhD is in [Machine Learning](study_program)
+    - I specialized in [Deep Learning](study_program)
+    - Studied [Robotics](study_program) at [Carnegie Mellon](university_name)
+    - Did my thesis in [Natural Language Processing](study_program)
+    - My research was in [Deep Learning](study_program)
+    - I focused on [AI](study_program) during my studies
+    - Got my degree in [Software Development](study_program)
+    - Completed courses in [Data Mining](study_program)
+    - My background is in [Computer Vision](study_program)
+    - Studied [Neural Networks](study_program) extensively
+    - Did research in [Machine Translation](study_program)
+
+- intent: share_experience
+  examples: |
+    - I have [2](years_experience) years of experience
+    - I've worked with ML for [3](years_experience) years
+    - I've been doing NLP for [1](years_experience) year
+    - I worked on several ML projects
+    - I have experience with transformers
+    - I've built classification models
+    - I've worked with PyTorch and TensorFlow
+    - I've developed NLP applications
+    - Experience in deep learning
+    - Built chatbots and language models
+    - Developed sentiment analysis systems
+    - Experience with BERT and transformers
+    - Worked on text classification
+    - Built recommendation systems
+    - Implemented neural networks
+    - Developed data pipelines
+    - Experience with model deployment
+    - Worked on information extraction
+    - Have [4](years_experience) years in machine learning
+    - Spent [5](years_experience) years developing AI solutions
+    - [2](years_experience) years of NLP development
+    - Built production ML systems
+    - Experienced with model optimization
+    - Worked on language understanding
+    - Developed custom embeddings
+    - Created training pipelines
+    - Implemented attention mechanisms
+    - Experience with transfer learning
+    - Built real-time ML systems
+    - Worked on data preprocessing
+    - Developed custom loss functions
+    - Experience with model evaluation
+    - Created data annotation systems
+    - Worked on multilingual models
+    - Built scalable ML solutions
+
+- intent: discuss_technical
+  examples: |
+    - transformers use self-attention mechanisms
+    - BERT processes text bidirectionally
+    - I would preprocess the data first
+    - we need to handle data cleaning
+    - using PyTorch for implementation
+    - neural networks can solve this
+    - need to consider model architecture
+    - tokenization is important
+    - embeddings represent words
+    - cross-validation helps evaluate
+    - attention mechanisms help
+    - need proper evaluation metrics
+    - regularization prevents overfitting
+    - batch normalization improves training
+    - need to handle class imbalance
+    - transfer learning is effective
+    - model interpretability matters
+    - data augmentation helps
+    - transformer models process sequences
+    - RNNs handle sequential data
+    - CNNs extract features
+    - LSTM maintains memory
+    - gradient descent optimizes
+    - backpropagation updates weights
+    - dropout prevents overfitting
+    - activation functions add non-linearity
+    - loss functions measure error
+    - optimizers update parameters
+    - hyperparameters need tuning
+    - models need validation
+    - metrics evaluate performance
+    - architecture affects results
+    - batching improves efficiency
+    - preprocessing is crucial
+    - features need engineering
+    - models need monitoring
+
+- intent: share_future_goals
+  examples: |
+    - I see myself as a [Senior ML Engineer](future_role)
+    - I see myself as a [Machine Learning Engineer](future_role)
+    - I want to become a [Lead NLP Researcher](future_role)
+    - Hope to be a [Technical Team Lead](future_role)
+    - I aim to be an [AI Research Scientist](future_role)
+    - Want to grow into a [Machine Learning Architect](future_role)
+    - I aspire to lead ML projects
+    - Hope to contribute to cutting-edge research
+    - Want to develop innovative solutions
+    - Plan to specialize in language models
+    - Interested in leading a research team
+    - Want to contribute to the field
+    - Aim to drive technical innovation
+    - Hope to mentor junior engineers
+    - Want to become a [Principal Engineer](future_role)
+    - See myself as a [Research Lead](future_role)
+    - Aim to be a [Technical Director](future_role)
+    - Want to lead an ML team
+    - Hope to drive AI innovation
+    - Plan to develop new algorithms
+    - Interested in advancing NLP
+    - Want to solve complex problems
+    - Aim to improve model efficiency
+    - Hope to work on challenging projects
+    - Want to push technical boundaries
+    - Plan to contribute research papers
+    - Interested in algorithm design
+    - Want to optimize ML systems
+    - Hope to create new frameworks
+    - Plan to lead technical initiatives
+    - Aim to develop breakthrough solutions
+
+- intent: share_availability
+  examples: |
+    - I can start [next month](start_date)
+    - Available from [July](start_date)
+    - I could join in [two weeks](start_date)
+    - I can start [immediately](start_date)
+    - Ready to begin [in August](start_date)
+    - Can join [after one month](start_date)
+    - Need [three weeks](start_date) notice
+    - Could start [from September](start_date)
+    - Available [right away](start_date)
+    - Would need [30 days](start_date)
+    - By [early August](start_date)
+    - Within [two months](start_date)
+    - Can start [next week](start_date)
+    - Available [in 2 weeks](start_date)
+    - Ready [by end of month](start_date)
+    - Can join [after notice period](start_date)
+    - Starting [first of next month](start_date)
+    - Available [mid-July](start_date)
+    - Can begin [in 3 weeks](start_date)
+    - Ready to start [by August 1st](start_date)
+    - Could join [after current project](start_date)
+    - Available [beginning of September](start_date)
+    - Can start [once notice is complete](start_date)
+    - Ready [within a month](start_date)
+    - Could begin [early next month](start_date)
+
+- intent: ask_about_position
+  examples: |
+    - what does the role involve?
+    - can you tell me more about the position?
+    - what would I be working on?
+    - what are the main responsibilities?
+    - what kind of projects would I handle?
+    - tell me about the day-to-day work
+    - what technologies do you use?
+    - what would my tasks be?
+    - what's the tech stack?
+    - what kind of ML projects do you work on?
+    - what tools will I be using?
+    - what frameworks do you work with?
+    - could you describe the role?
+    - what would be my main duties?
+    - what type of problems would I solve?
+    - what's the development process like?
+    - what would a typical day look like?
+    - what kind of team would I join?
+    - what projects are currently ongoing?
+    - what challenges would I face?
+    - what's the project structure?
+    - how is the work organized?
+    - what methodologies do you use?
+    - what's the development cycle?
+    - what's the team composition?
+    - what would be my first project?
+    - what's the learning curve?
+    - how is work distributed?
+    - what's the deployment process?
+    - how are projects managed?
+
+- intent: ask_clarification
+  examples: |
+    - could you explain that further?
+    - what do you mean by that?
+    - could you clarify?
+    - I'm not sure I understand
+    - can you give an example?
+    - could you be more specific?
+    - what exactly are you looking for?
+    - could you rephrase that?
+    - can you elaborate?
+    - what would that involve?
+    - could you provide more details?
+    - can you explain differently?
+    - what are you referring to?
+    - could you break that down?
+    - I don't quite follow
+    - what does that entail?
+    - can you be more explicit?
+    - what exactly do you mean?
+    - could you give more context?
+    - I need more information
+    - what would be an example?
+    - how would that work?
+    - could you explain the process?
+    - what's involved in that?
+    - could you describe that better?
+    - what are the specifics?
+    - how does that function?
+    - what's the meaning of that?
+    - could you elaborate more?
+    - what's the context here?
+
+- intent: ask_about_company
+  examples: |
+    - tell me about ITML
+    - what kind of company is ITML?
+    - what's the company culture like?
+    - how big is the team?
+    - what projects does ITML work on?
+    - how many people are in the ML team?
+    - what's the company's focus?
+    - how long has ITML been operating?
+    - what's the work environment like?
+    - what's the development process?
+    - what's ITML's main business?
+    - who are ITML's clients?
+    - what industries does ITML serve?
+    - how is ITML organized?
+    - what's the company structure?
+    - what's the work culture like?
+    - how does ITML approach ML?
+    - what's ITML's tech stack?
+    - what's the company vision?
+    - how does ITML innovate?
+    - what makes ITML unique?
+    - what's the growth path?
+    - how does ITML develop talent?
+    - what's the learning environment?
+    - how does ITML handle projects?
+    - what's the company size?
+    - what's ITML's market position?
+    - what's the office culture?
+    - how big is ITML?
+    - what's it like working at ITML?
+
+- intent: out_of_scope
+  examples: |
+    - what's the weather like?
+    - who won the game last night?
+    - tell me a joke
+    - what's your favorite color
+    - can you sing a song
+    - what's the meaning of life
+    - do you like movies
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you human?
+    - am I talking to a bot?
+    - is this an AI?
+    - are you an AI interviewer?
+    - who am I talking to?
+    - are you real?
+    - is this automated?
+    - are you a real person?
+    - am I speaking with AI?
+    - is this a computer?
+    - are you actually human?
+    - are you a machine?
+    - is this an automated interview?
+    - am I talking to a program?
+    - are you artificial intelligence?
+    - is this a real person?
+    - are you automated?
+    - is this interview conducted by AI?
+    - are you a virtual interviewer?
+    - is this a human conversation?
+    - am I chatting with a computer?
+    - are you an automated system?
+    - is this an AI interview?
+    - are you a chatbot?
+    - is this a bot interview?
+    - am I talking to a human?
+    - are you an AI assistant?
+    - is this automated screening?
+    - are you a virtual assistant?

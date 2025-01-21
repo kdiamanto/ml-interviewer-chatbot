@@ -1,0 +1,83 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime and save info
+  steps:
+  - intent: goodbye
+  - action: action_save_candidate_info
+  - action: utter_goodbye
+  - action: action_listen
+
+- rule: Bot challenge response
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - action: utter_transition_after_bot
+  - action: action_listen
+
+- rule: Handle out-of-scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: utter_get_back_on_track
+  - action: action_listen
+
+- rule: Default fallback
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default
+  - action: action_listen
+
+- rule: Greet at conversation start
+  conversation_start: true
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_listen
+
+- rule: Handle name when provided
+  steps:
+  - intent: provide_name
+  - action: utter_welcome
+  - action: action_listen
+
+- rule: Handle salary questions
+  steps:
+  - intent: ask_salary
+  - action: utter_about_salary
+  - action: action_listen
+
+- rule: Handle clarification mid-technical
+  condition:
+  - active_loop: null
+  - slot_was_set:
+    - interview_progress: technical
+  steps:
+  - intent: ask_clarification
+  - action: utter_technical_clarification
+  - action: action_listen
+
+- rule: Handle general clarification
+  condition:
+  - active_loop: null
+  - slot_was_set:
+    - interview_progress: null
+  steps:
+  - intent: ask_clarification
+  - action: utter_clarification
+  - action: action_listen
+
+- rule: Handle company questions
+  steps:
+  - intent: ask_about_company
+  - action: utter_about_company
+  - action: action_listen
+
+- rule: Handle location affirmation
+  condition:
+  - slot_was_set:
+    - interview_progress: logistics
+  steps:
+  - intent: affirm
+  - action: utter_wrap_up

@@ -1,0 +1,226 @@
+version: "3.1"
+
+stories:
+
+- story: happy path full interview
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: provide_name
+  - slot_was_set:
+    - name: "name"
+  - action: utter_welcome
+  - intent: mood_great
+  - action: utter_mood_great
+  - slot_was_set:
+    - interview_progress: introduction
+  - action: action_provide_job_details
+  - slot_was_set:
+    - interview_progress: education
+  - intent: provide_education_info
+  - slot_was_set:
+    - university_name: "university_name"
+    - study_program: "study_program"
+  - action: action_analyze_education_background
+  - slot_was_set:
+    - interview_progress: experience
+  - intent: share_experience
+  - slot_was_set:
+    - experience_years: "years_experience"
+  - action: utter_positive_reinforcement
+  - action: utter_transition_to_technical
+  - slot_was_set:
+    - interview_progress: technical
+  - action: utter_technical_question
+  - intent: discuss_technical
+  - action: action_validate_technical_response
+  - slot_was_set:
+    - technical_validated: true
+  - action: utter_ask_five_years
+  - slot_was_set:
+    - interview_progress: future_goals
+  - intent: share_future_goals
+  - slot_was_set:
+    - future_role: "future_role"
+  - action: utter_acknowledge_future_goals
+  - action: utter_ask_availability
+  - slot_was_set:
+    - interview_progress: logistics
+  - intent: share_availability
+  - slot_was_set:
+    - start_date: "start_date"
+  - action: utter_location
+  - intent: affirm
+  - action: utter_wrap_up
+  - intent: goodbye
+  - slot_was_set:
+    - interview_progress: closing
+  - action: action_save_candidate_info
+  - action: utter_goodbye
+
+- story: nervous candidate path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: provide_name
+  - slot_was_set:
+    - name: "name"
+  - action: utter_welcome
+  - intent: mood_unhappy
+  - action: utter_mood_unhappy
+  - slot_was_set:
+    - interview_progress: introduction
+  - action: utter_comfort_candidate
+  - action: action_provide_job_details
+  - slot_was_set:
+    - interview_progress: education
+  - intent: provide_education_info
+  - slot_was_set:
+    - university_name: "university_name"
+    - study_program: "study_program"
+  - action: action_analyze_education_background
+  - slot_was_set:
+    - interview_progress: experience
+  - intent: share_experience
+  - slot_was_set:
+    - experience_years: "years_experience"
+  - action: utter_positive_reinforcement
+  - action: utter_transition_to_technical
+  - slot_was_set:
+    - interview_progress: technical
+  - action: utter_technical_question
+  - intent: discuss_technical
+  - action: action_validate_technical_response
+  - slot_was_set:
+    - technical_validated: true
+  - action: utter_ask_five_years
+  - slot_was_set:
+    - interview_progress: future_goals
+  - intent: share_future_goals
+  - slot_was_set:
+    - future_role: "future_role"
+  - action: utter_acknowledge_future_goals
+  - action: utter_ask_availability
+  - slot_was_set:
+    - interview_progress: logistics
+  - intent: share_availability
+  - slot_was_set:
+    - start_date: "start_date"
+  - action: utter_location
+  - intent: affirm
+  - action: utter_wrap_up
+  - intent: goodbye
+  - slot_was_set:
+    - interview_progress: closing
+  - action: action_save_candidate_info
+  - action: utter_goodbye
+
+- story: education discussion with details
+  steps:
+  - intent: provide_education_info
+  - slot_was_set:
+    - university_name: "university_name"
+    - study_program: "study_program"
+    - interview_progress: education
+  - action: action_analyze_education_background
+  - intent: share_experience
+  - slot_was_set:
+    - experience_years: "years_experience"
+    - interview_progress: experience
+  - action: utter_positive_reinforcement
+  - action: utter_transition_to_technical
+  - action: utter_technical_question
+
+- story: technical discussion path
+  steps:
+  - action: utter_technical_question
+  - intent: discuss_technical
+  - action: action_validate_technical_response
+  - or:
+    - slot_was_set:
+        - technical_validated: true
+        - interview_progress: future_goals
+    - slot_was_set:
+        - technical_validated: false
+  - intent: share_future_goals 
+  - action: utter_acknowledge_future_goals
+  - action: utter_ask_availability
+
+- story: technical discussion with clarification
+  steps:
+  - action: utter_technical_question
+  - intent: ask_clarification
+  - slot_was_set:
+    - interview_progress: technical
+  - action: utter_technical_clarification
+  - intent: discuss_technical
+  - action: action_validate_technical_response
+  - slot_was_set:
+    - technical_validated: true
+  - action: utter_transition_to_future
+
+- story: future goals discussion
+  steps:
+  - action: utter_ask_five_years
+  - intent: share_future_goals
+  - slot_was_set:
+    - future_role: "future_role"
+    - interview_progress: future_goals
+  - action: utter_acknowledge_future_goals
+  - action: utter_transition_to_logistics
+
+- story: availability and location discussion
+  steps:
+  - action: utter_ask_availability
+  - intent: share_availability
+  - slot_was_set:
+    - start_date: "start_date"
+    - interview_progress: logistics
+  - action: utter_location
+  - intent: affirm
+  - action: utter_wrap_up
+  - intent: goodbye
+  - action: action_save_candidate_info
+  - action: utter_goodbye
+  - slot_was_set:
+    - interview_progress: closing
+
+- story: location concern path
+  steps:
+  - action: utter_location
+  - intent: deny
+  - slot_was_set:
+    - interview_progress: logistics
+  - action: utter_comfort_candidate
+  - action: utter_wrap_up
+
+- story: technical validation with followup needed
+  steps:
+  - intent: discuss_technical
+  - action: action_validate_technical_response
+  - slot_was_set:
+    - technical_validated: false
+    - interview_progress: technical
+  - action: utter_encourage_detail
+  - intent: discuss_technical
+  - action: action_validate_technical_response
+  - slot_was_set:
+    - technical_validated: true
+  - action: utter_transition_to_future
+
+- story: job details inquiry mid-interview
+  steps:
+  - intent: ask_about_position
+  - action: action_provide_job_details
+  - slot_was_set:
+    - job_details_provided: true
+
+- story: bot challenge handling
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - action: utter_transition_after_bot
+  - intent: provide_name
+  - slot_was_set:
+    - name: "name"
+  - action: utter_welcome

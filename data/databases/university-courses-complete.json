@@ -1,0 +1,476 @@
+{
+  "courses": {
+    "NLP": [
+      "Natural Language Processing",
+      "Introduction to Natural Language Processing",
+      "Statistical Natural Language Processing",
+      "Advanced Natural Language Processing",
+      "Natural Language Understanding",
+      "Natural Language Computing",
+      "Computational Natural Language Processing",
+      "Empirical Methods in Natural Language Processing",
+      "Shallow Methods in Natural Language Processing",
+      "Deep Processing Techniques for Natural Language Processing"
+    ],
+    "Programming": [
+      "Programming and Algorithms for NLP",
+      "Programming Techniques in Computational Linguistics",
+      "Computing Methods for Linguistics",
+      "AI Methods in Computational Linguistics",
+      "Concurrent Programming for NLP",
+      "Software Development for Language Processing"
+    ],
+    "Language Engineering": [
+      "Human Language Technology",
+      "Language Technology",
+      "Computational Linguistics",
+      "Spoken Language Dialogue Systems",
+      "Speech Recognition and Synthesis",
+      "Machine Translation",
+      "Introduction to Computer Speech and Language Processing",
+      "Linguistic Engineering",
+      "Language Processing and Computational Linguistics",
+      "Grammar Formalisms",
+      "Parsing Systems",
+      "Computational Morphology",
+      "Computational Syntax",
+      "Computational Semantics"
+    ],
+    "Data Analysis": [
+      "Statistical Language Processing",
+      "Language and Statistics",
+      "Text Mining",
+      "Information Retrieval",
+      "Quantitative Language Modeling",
+      "Statistical Learning of Natural Language",
+      "Pattern Recognition in Language",
+      "Methods of Semantic Analysis",
+      "Linguistic Data Science"
+    ],
+    "Data Preprocessing": [
+      "Document Processing and the Semantic Web",
+      "Text Processing",
+      "Corpus Linguistics",
+      "Document Analysis",
+      "Language Resource Development",
+      "Data Collection and Annotation",
+      "Text Normalization"
+    ]
+  },
+  "universities": [
+    {
+      "country": "Australia",
+      "institutions": [
+        {
+          "name": "Macquarie University",
+          "courseList": [
+            {
+              "name": "Introduction to Natural Language Processing",
+              "level": "Both",
+              "languages": ["Prolog"],
+              "type": "NLP"
+            },
+            {
+              "name": "Document Processing and the Semantic Web",
+              "level": "Undergraduate",
+              "languages": ["Python"],
+              "type": "Data Preprocessing"
+            },
+            {
+              "name": "Spoken Language Dialogue Systems",
+              "level": "Undergraduate",
+              "languages": ["Prolog"],
+              "type": "Language Engineering"
+            }
+          ]
+        },
+        {
+          "name": "University of Melbourne",
+          "courseList": [
+            {
+              "name": "Human Language Technology",
+              "level": "Undergraduate",
+              "languages": ["Python"],
+              "type": "Language Engineering"
+            },
+            {
+              "name": "Computational Linguistics",
+              "level": "Undergraduate",
+              "languages": ["Python"],
+              "type": "Language Engineering"
+            }
+          ]
+        },
+        {
+          "name": "University of Sydney",
+          "courseList": [
+            {
+              "name": "Statistical Natural Language Processing",
+              "level": "Graduate",
+              "languages": ["Python"],
+              "type": "NLP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Austria",
+      "institutions": [
+        {
+          "name": "University of Vienna",
+          "courseList": [
+            {
+              "name": "Wissensbasierte Sprachverarbeitung",
+              "level": "Graduate",
+              "languages": ["Prolog"],
+              "type": "Language Engineering"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Belarus",
+      "institutions": [
+        {
+          "name": "Grodno State University",
+          "courseList": [
+            {
+              "name": "Introduction to Computational Linguistics",
+              "level": "Undergraduate",
+              "languages": [],
+              "type": "Language Engineering"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Belgium",
+      "institutions": [
+        {
+          "name": "Katholieke Universiteit Leuven (K.U.Leuven)",
+          "courseList": [
+            {
+              "name": "Text Based Information Retrieval",
+              "level": "Both",
+              "languages": ["Java", "C", "MATLAB"],
+              "type": "Data Analysis"
+            },
+            {
+              "name": "Natural Language Processing",
+              "level": "Master",
+              "languages": ["Perl"],
+              "type": "NLP"
+            },
+            {
+              "name": "Linguistic Theories and Artificial Intelligence",
+              "level": "Master",
+              "languages": [],
+              "type": "Language Engineering"
+            },
+            {
+              "name": "Computerlinguïstiek",
+              "level": "Undergraduate",
+              "languages": ["Perl"],
+              "type": "Language Engineering"
+            }
+          ]
+        },
+        {
+          "name": "University of Antwerp",
+          "courseList": [
+            {
+              "name": "Computational Linguistics",
+              "level": "Master",
+              "languages": ["Python"],
+              "type": "Language Engineering"
+            },
+            {
+              "name": "Computational Models of Language Understanding",
+              "level": "Master",
+              "languages": ["Python"],
+              "type": "Language Engineering"
+            },
+            {
+              "name": "Computational Psycholinguistics",
+              "level": "Master",
+              "languages": [],
+              "type": "Language Engineering"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Brazil",
+      "institutions": [
+        {
+          "name": "Universidade Federal de Santa Catarina",
+          "courseList": [
+            {
+              "name": "Lingüística Computacional",
+              "level": "Graduate",
+              "languages": ["Perl", "Prolog"],
+              "type": "Language Engineering"
+            },
+            {
+              "name": "Lingüística Computacional I/II",
+              "level": "Undergraduate",
+              "languages": ["Perl", "Prolog"],
+              "type": "Language Engineering"
+            }
+          ]
+        },
+        {
+          "name": "Universidade Federal de São Carlos",
+          "courseList": [
+            {
+              "name": "Topics on Informatics (Introduction on NLP)",
+              "level": "Graduate",
+              "languages": ["C", "C++", "Prolog"],
+              "type": "NLP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "Canada",
+      "institutions": [
+        {
+          "name": "Concordia University",
+          "courseList": [
+            {
+              "name": "Statistical Language Processing",
+              "level": "Graduate",
+              "languages": ["Java", "C++", "Perl"],
+              "type": "Data Analysis"
+            }
+          ]
+        },
+        {
+          "name": "Dalhousie University",
+          "courseList": [
+            {
+              "name": "Natural Language Processing",
+              "level": "Both",
+              "languages": ["Perl", "Python", "Prolog"],
+              "type": "NLP"
+            }
+          ]
+        },
+        {
+          "name": "Simon Fraser University",
+          "courseList": [
+            {
+              "name": "Computational Linguistics",
+              "level": "Undergraduate",
+              "languages": ["Perl"],
+              "type": "Language Engineering"
+            },
+            {
+              "name": "Natural Language Processing",
+              "level": "Graduate",
+              "languages": ["Perl"],
+              "type": "NLP"
+            },
+            {
+              "name": "Statistical Learning of Natural Language",
+              "level": "Graduate",
+              "languages": [],
+              "type": "Data Analysis"
+            }
+          ]
+        },
+        {
+          "name": "University of Toronto",
+          "courseList": [
+            {
+              "name": "Computational Linguistics",
+              "level": "Both",
+              "languages": ["C++"],
+              "type": "Language Engineering"
+            },
+            {
+              "name": "Natural Language Computing",
+              "level": "Both",
+              "languages": ["Python"],
+              "type": "NLP"
+            },
+            {
+              "name": "Advanced Computational Linguistics",
+              "level": "Graduate",
+              "languages": [],
+              "type": "Language Engineering"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "China",
+      "institutions": [
+        {
+          "name": "Nanjing Normal University",
+          "courseList": [
+            {
+              "name": "Statistical Natural Language Processing",
+              "level": "Graduate",
+              "languages": ["C++"],
+              "type": "NLP"
+            }
+          ]
+        },
+        {
+          "name": "Nanjing University",
+          "courseList": [
+            {
+              "name": "Machine Translation",
+              "level": "Graduate",
+              "languages": [],
+              "type": "Language Engineering"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "UK",
+      "institutions": [
+        {
+          "name": "University of Cambridge",
+          "courseList": [
+            {
+              "name": "Natural Language Processing",
+              "level": "Undergraduate",
+              "languages": [],
+              "type": "NLP"
+            },
+            {
+              "name": "MPhil in Advanced Computer Science",
+              "level": "Graduate",
+              "languages": [],
+              "type": "Programming"
+            }
+          ]
+        },
+        {
+          "name": "University of Edinburgh",
+          "courseList": [
+            {
+              "name": "M.Sc. in Speech and Language Processing",
+              "level": "Graduate",
+              "languages": ["Java", "Perl", "Prolog", "Python"],
+              "type": "Language Engineering"
+            }
+          ]
+        },
+        {
+          "name": "University of Sheffield",
+          "courseList": [
+            {
+              "name": "M.Sc. Human Language Technology",
+              "level": "Postgraduate",
+              "languages": [],
+              "type": "Language Engineering"
+            },
+            {
+              "name": "Natural Language Processing",
+              "level": "Both",
+              "languages": ["Python"],
+              "type": "NLP"
+            },
+            {
+              "name": "Text Processing",
+              "level": "Both",
+              "languages": ["Python"],
+              "type": "Data Preprocessing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "country": "USA",
+      "institutions": [
+        {
+          "name": "Stanford University",
+          "courseList": [
+            {
+              "name": "Natural Language Processing",
+              "level": "Both",
+              "languages": ["Java"],
+              "type": "NLP"
+            },
+            {
+              "name": "Introduction to Computer Speech and Language Processing",
+              "level": "Undergraduate",
+              "languages": ["Perl", "Python", "Java"],
+              "type": "Language Engineering"
+            },
+            {
+              "name": "Natural Language Understanding",
+              "level": "Both",
+              "languages": [],
+              "type": "NLP"
+            },
+            {
+              "name": "Programming and Algorithms for NLP",
+              "level": "Both",
+              "languages": [],
+              "type": "Programming"
+            }
+          ]
+        },
+        {
+          "name": "Carnegie Mellon University",
+          "courseList": [
+            {
+              "name": "Natural Language Processing",
+              "level": "Undergraduate",
+              "languages": ["various"],
+              "type": "NLP"
+            },
+            {
+              "name": "Algorithms for Natural Language Processing",
+              "level": "Graduate",
+              "languages": [],
+              "type": "Programming"
+            },
+            {
+              "name": "Language and Statistics I",
+              "level": "Graduate",
+              "languages": [],
+              "type": "Data Analysis"
+            },
+            {
+              "name": "Language and Statistics II",
+              "level": "Graduate",
+              "languages": [],
+              "type": "Data Analysis"
+            }
+          ]
+        },
+        {
+          "name": "MIT",
+          "courseList": [
+            {
+              "name": "Natural Language Processing",
+              "level": "Both",
+              "languages": ["Python"],
+              "type": "NLP"
+            },
+            {
+              "name": "Advanced Natural Language Processing",
+              "level": "Graduate",
+              "languages": ["Python"],
+              "type": "NLP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
