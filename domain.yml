@@ -1,0 +1,315 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - provide_name
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - provide_education_info
+  - share_experience
+  - ask_about_position
+  - share_availability
+  - bot_challenge
+  - ask_salary
+  - ask_location
+  - discuss_technical
+  - ask_about_company
+  - ask_clarification
+  - share_future_goals
+  - express_career_aspirations
+  - out_of_scope
+
+entities:
+  - name
+  - university_name
+  - study_program
+  - years_experience
+  - start_date
+  - programming_language
+  - future_role
+
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name
+  university_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: university_name
+  study_program:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: study_program
+  experience_years:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: years_experience
+  start_date:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: start_date
+  future_role:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: future_role
+  technical_expertise:
+    type: list
+    influence_conversation: true
+    mappings:
+      - type: custom
+  interview_progress:
+    type: categorical
+    influence_conversation: true
+    mappings:
+      - type: custom
+    initial_value: introduction
+    values:
+      - introduction
+      - education
+      - experience
+      - technical
+      - future_goals
+      - logistics
+      - closing
+  last_question_asked:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: custom
+  technical_attempts:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: custom
+  confidence_level:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: custom
+  awaiting_coursework:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+  asked_about_projects:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+  ready_for_technical:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+  technical_validated:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+  job_details_provided:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+  education_analyzed:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+  career_goals_discussed:
+    type: bool
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+responses:
+  utter_greet:
+    - text: "Hello! I'm conducting interviews for ITML's Junior ML Engineer position. Before we begin, could you tell me your name?"
+    - text: "Hi there! I'm the interviewer for the ML Engineer position at ITML. Could you please introduce yourself?"
+    - text: "Welcome to your interview for the Junior ML Engineer role at ITML. First, may I know your name?"
+
+  utter_welcome:
+    - text: "Nice to meet you, {name}! I'm excited to learn more about your background. How are you feeling today?"
+    - text: "Welcome, {name}! How are you doing today?"
+    - text: "Great to meet you, {name}! How are you feeling about our conversation today?"
+
+  utter_mood_great:
+    - text: "That's wonderful to hear, {name}! Let's talk about your interest in the ML Engineer position."
+    - text: "Excellent! That positive energy will be great for our discussion. Shall we begin talking about the role?"
+    - text: "Great to hear you're feeling positive, {name}! Let's make the most of this conversation."
+
+  utter_mood_unhappy:
+    - text: "I understand interviews can be nerve-wracking, {name}. Don't worry, we'll take it step by step."
+    - text: "That's completely normal to feel nervous, {name}. Let's have a casual conversation about your background."
+    - text: "I appreciate your honesty about feeling nervous, {name}. Let's make this a comfortable discussion."
+
+  utter_iamabot:
+    - text: "Yes, I'm an AI interviewer conducting initial screenings for ITML. Given that you're interested in an ML/NLP position, I find it quite fitting! Shall we continue?"
+    - text: "Indeed, I am an AI assistant. As you're applying for an ML/NLP role, I think it's quite appropriate that you're being interviewed by an AI! Would you like to proceed with our discussion?"
+    - text: "You're correct, I'm an AI interviewer. Since we're discussing an ML position, this seems particularly relevant! Shall we continue with the interview?"
+
+  utter_ask_education:
+    - text: "First, {name}, could you tell me about your educational background? Which university did you attend?"
+    - text: "Let's start with your education, {name}. Where did you study?"
+    - text: "I'd like to know about your academic background, {name}. Which university did you graduate from?"
+
+  utter_ask_experience:
+    - text: "{name}, could you tell me about your experience with Machine Learning and NLP?"
+    - text: "What kind of ML or NLP projects have you worked on, {name}?"
+    - text: "Could you share your practical experience in machine learning and natural language processing, {name}?"
+
+  utter_technical_question:
+    - text: "Could you explain how transformer models work and their advantages in NLP tasks?"
+    - text: "What's your experience with deep learning frameworks? Could you provide specific examples?"
+    - text: "How would you approach a text classification problem from start to finish?"
+    - text: "Could you explain your understanding of word embeddings and their importance in NLP?"
+    - text: "What's your experience with model deployment and scaling ML systems?"
+
+  utter_ask_five_years:
+    - text: "Looking ahead {name}, where do you see yourself professionally in 5 years?"
+    - text: "What are your career aspirations for the next 5 years, {name}?"
+    - text: "How do you envision your career progression over the next few years, {name}?"
+
+  utter_ask_availability:
+    - text: "When would you be available to start if selected for the position, {name}?"
+    - text: "What would be your earliest possible start date, {name}?"
+    - text: "If we proceed with your application, when could you join the team, {name}?"
+
+  utter_location:
+    - text: "The position is based in Athens, Greece. Would this location work for you?"
+    - text: "Our office is located in Athens, Greece. Is this location suitable for you?"
+    - text: "This role requires working from our Athens office. Would that be feasible for you?"
+
+  utter_acknowledge_future_goals:
+    - text: "Those are interesting career aspirations, {name}. ITML offers good opportunities for growth in {future_role}."
+    - text: "That's a clear vision for your future, {name}. We definitely support career development in those directions."
+    - text: "Your career goals align well with ITML's growth trajectory, particularly in {future_role}."
+
+  utter_goodbye:
+    - text: "Thank you for your time today, {name}. We'll be in touch soon about next steps."
+    - text: "It was great meeting you, {name}. The team will review your profile and contact you shortly."
+    - text: "I appreciate your time and insights, {name}. We'll contact you soon about the next steps."
+
+  utter_out_of_scope:
+    - text: "I apologize, {name}, but I can only discuss topics related to the job interview and your qualifications. Could we stay on topic?"
+    - text: "I understand your question, {name}, but let's focus on your application for the ML Engineer position. Shall we continue with that?"
+    - text: "Let's keep our discussion focused on the interview and your qualifications, {name}. What would you like to know about the position?"
+
+  utter_default:
+    - text: "I apologize, but I didn't quite understand. Could you rephrase that?"
+    - text: "I'm not sure I understood correctly. Could you say that differently?"
+    - text: "Could you please rephrase your question? I want to make sure I provide the right information."
+
+  utter_clarification:
+    - text: "Could you clarify that point, {name}? I want to make sure I understand correctly."
+    - text: "Would you mind explaining that in a different way, {name}?"
+    - text: "Could you provide more detail about what you mean, {name}?"
+
+  utter_positive_reinforcement:
+    - text: "That's exactly the kind of experience we're looking for, {name}."
+    - text: "Your approach aligns well with how we work at ITML, {name}."
+    - text: "Your experience in this area is very relevant to what we do, {name}."
+
+  utter_encourage_detail:
+    - text: "Feel free to provide specific examples, {name}."
+    - text: "Don't hesitate to go into technical details, {name}. That's what we're here to discuss."
+    - text: "I'd be interested in hearing more specific details about your experience, {name}."
+
+  utter_transition_to_technical:
+    - text: "Thank you for sharing your experience, {name}. Let's move on to some technical questions now:"
+    - text: "That's valuable experience, {name}. Now, I'd like to explore your technical knowledge now:"
+    - text: "Your background is interesting, {name}. Let me ask you a technical question now:"
+
+  utter_transition_to_future:
+    - text: "Now, let's talk about your career goals. Where do you see yourself professionally in 5 years?"
+    - text: "Looking ahead, could you share your career aspirations?"
+    - text: "What are your professional goals for the next few years?"
+
+  utter_transition_to_logistics:
+    - text: "Let's discuss some practical aspects. When would you be available to start if selected?"
+    - text: "Now for some logistics. What would be your earliest possible start date?"
+    - text: "Regarding logistics, when could you potentially join the team?"
+
+  utter_wrap_up:
+    - text: "We've covered a lot of ground, {name}. Is there anything else you'd like to know about the position?"
+    - text: "Before we conclude, {name}, do you have any questions about the role or company?"
+    - text: "We're nearing the end of our discussion, {name}. What other questions can I answer for you?"
+
+  utter_about_salary:
+    - text: "While I can't discuss specific salary details at this stage, {name}, the compensation package is competitive and includes benefits. This would be discussed in detail in follow-up interviews."
+    - text: "The compensation package is competitive for the market and your experience level, {name}. Specific details would be discussed in subsequent interviews."
+    - text: "We offer competitive compensation based on experience and skills, {name}. The exact details would be covered in the next interview stage."
+
+  utter_about_company:
+    - text: "ITML is a technology company focused on innovative ML and AI solutions. We work on cutting-edge projects, particularly in natural language processing and machine learning."
+    - text: "ITML specializes in developing advanced AI and ML solutions. Our team works on innovative projects in various domains, with a strong focus on NLP."
+    - text: "As a technology company, ITML is at the forefront of AI and ML innovation. We're particularly known for our work in natural language processing and machine learning solutions."
+
+  utter_get_back_on_track:
+    - text: "Let's return to our discussion about the position, {name}. Where were we?"
+    - text: "Shall we continue with our interview discussion, {name}?"
+    - text: "Let's focus back on your application, {name}. What would you like to know about the position?"
+
+  utter_transition_after_bot:
+    - text: "Now, shall we continue with the interview? Could you tell me your name?"
+    - text: "Let's proceed with the interview process. First, could you share your name?"
+    - text: "Moving forward with our discussion, could you introduce yourself?"
+
+  utter_technical_clarification:
+    - text: "Could you elaborate on your technical implementation approach?"
+    - text: "Would you mind explaining the technical aspects in more detail?"
+    - text: "Could you provide more specific technical details about your solution?"
+
+  utter_comfort_candidate:
+    - text: "It's perfectly normal to feel nervous, {name}. Let's take this one step at a time."
+    - text: "Many candidates feel the same way, {name}. We'll have a relaxed conversation."
+    - text: "Don't worry, {name}. This is just a friendly discussion about your experience and goals."
+
+  utter_explain_process:
+    - text: "Let me outline the interview process for you. We'll discuss your background, technical experience, and career goals."
+    - text: "The interview will cover your education, experience, and technical skills. Feel free to ask questions at any point."
+    - text: "We'll go through your experience, technical knowledge, and future aspirations. Please feel comfortable asking for clarification."
+
+  utter_acknowledge_enthusiasm:
+    - text: "Your enthusiasm for the field is evident, {name}. That's exactly what we're looking for."
+    - text: "It's great to see your passion for technology, {name}. That kind of motivation is valuable to us."
+    - text: "Your excitement about ML and AI really shows, {name}. That's the kind of energy we appreciate."
+
+actions:
+  - action_analyze_education_background
+  - action_provide_job_details
+  - action_validate_technical_response
+  - action_save_candidate_info
+  - utter_ask_education
+  - utter_technical_clarification
+  - utter_comfort_candidate
+  - utter_explain_process
+  - utter_acknowledge_enthusiasm
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+
+    
+  
+
+ 
+  
