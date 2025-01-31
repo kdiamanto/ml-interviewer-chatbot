@@ -105,38 +105,73 @@ Bot: Hello! I'm conducting interviews for ITML's Junior ML Engineer position. Be
 Human: I'm Kostas
 
 Bot: Nice to meet you, Kostas! I'm excited to learn more about your background. How are you feeling today?
+
 Human: I'm good
+
 Bot: That's wonderful to hear, Kostas! Let's talk about your interest in the ML Engineer position.
+
 [Job details provided...]
+
 Now, Kostas, could you tell me about your education? Which university did you attend?
+
 Human: I studied at MIT.
-Bot: I see you studied at MIT in USA. 
+
+Bot: I see you studied at MIT in USA.
+
 I notice your university offers relevant courses:
+
 NLP courses:
+
 • Natural Language Processing
+
 • Advanced Natural Language Processing
+
 The curriculum includes experience with: Python
+
 Could you share your practical experience with ML and NLP technologies?
+
 Human: I've worked extensively on speech recognition systems using deep learning. I've implemented attention mechanisms and transformer architectures for speech-to-text applications.
+
 example case 1:
+
 Bot: Your experience in this area is very relevant to what we do, Kostas.
+
 Your background is interesting, Kostas. Let me ask you a technical question now:
+
 How would you approach a text classification problem from start to finish?
+
 Human: In my approach, I'd start with preprocessing and building a data pipeline. For the model architecture, I'd use deep learning methods with transformers or LSTM networks. I'd implement this using PyTorch, focusing on sequence processing and classification techniques.
+
 example case 2:
+
 Bot: Your approach aligns well with how we work at ITML, Kostas.
+
 Thank you for sharing your experience, Kostas. Let's move on to some technical questions now:
+
 Could you explain your understanding of word embeddings and their importance in NLP?
-Human: Word embeddings are fundamental in deep learning approaches to NLP, transforming text into vector representations. I've used frameworks like PyTorch to implement transformer models like BERT, which use contextual embeddings for text processing and classification tasks.    
+
+Human: Word embeddings are fundamental in deep learning approaches to NLP, transforming text into vector representations. I've used frameworks like PyTorch to implement transformer models like BERT,
+
+which use contextual embeddings for text processing and classification tasks.
+
 Bot: Excellent Kostas! Your technical knowledge is impressive. Let's talk about your future goals. Where do you see yourself professionally in 5 years?
+
 Human: I aim to become a Senior ML Engineer, focusing on developing innovative NLP solutions.
+
 Bot: Your career goals align well with ITML's growth trajectory, particularly in Senior ML Engineer. When would you be available to start if selected for the position, Kostas?
+
 Human: I could start in two weeks.
+
 Bot: Our office is located in Athens, Greece. Is this location suitable for you?
+
 Human: Yes, that works perfectly.
+
 Bot: We've covered a lot of ground, Kostas. Is there anything else you'd like to know about the position?
+
 Human: No, thank you for your time.
+
 Bot: Thank you for your time today Kostas. Our team will review your profile and contact you soon about next steps.
+
 ```
 
 ## Dialog Policy Experimentation
