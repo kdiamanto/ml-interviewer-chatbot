@@ -101,7 +101,9 @@ Here's a sample interview conversation demonstrating the chatbot's capabilities:
 
 ```
 Bot: Hello! I'm conducting interviews for ITML's Junior ML Engineer position. Before we begin, could you tell me your name?
+
 Human: I'm Kostas
+
 Bot: Nice to meet you, Kostas! I'm excited to learn more about your background. How are you feeling today?
 Human: I'm good
 Bot: That's wonderful to hear, Kostas! Let's talk about your interest in the ML Engineer position.
