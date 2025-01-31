@@ -150,9 +150,7 @@ Thank you for sharing your experience, Kostas. Let's move on to some technical q
 
 Could you explain your understanding of word embeddings and their importance in NLP?
 
-Human: Word embeddings are fundamental in deep learning approaches to NLP, transforming text into vector representations. I've used frameworks like PyTorch to implement transformer models like BERT,
-
-which use contextual embeddings for text processing and classification tasks.
+Human: Word embeddings are fundamental in deep learning approaches to NLP, transforming text into vector representations. I've used frameworks like PyTorch to implement transformer models like BERT, which use contextual embeddings for text processing and classification tasks.
 
 Bot: Excellent Kostas! Your technical knowledge is impressive. Let's talk about your future goals. Where do you see yourself professionally in 5 years?
 
