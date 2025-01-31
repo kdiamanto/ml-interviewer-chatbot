@@ -200,7 +200,7 @@ Bot: Thank you for your time today Kostas. Our team will review your profile and
 - Integration with calendar systems for scheduling
 
 ## Presentation
-The detailed presentation of this project can be found in the [presentations folder](./presentations/ml_interviewer_chatbot.pdf).
+The detailed presentation of this project can be found in the present respository as a pdf file - Rasa_Chatbot_Interviewer_Presentation_Diamantopoulos.pdf.
 
 ## Repository Structure
 ```
