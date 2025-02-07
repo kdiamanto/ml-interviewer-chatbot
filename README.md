@@ -248,23 +248,43 @@ The detailed presentation of this project can be found in the present repository
 │   └── actions.py
 
 ├── data/
+
 │   ├── nlu.yml
+
 │   ├── rules.yml
+
 │   ├── stories.yml
+
 │   └── databases/
+
 │       └── university-courses-complete.json
+
 ├── utils/
-│   └── university_data_collector.py  # New utility for database enrichment
+
+│   └── university_data_collector.py
+
 ├── presentations/
+
 │   └── ml_interviewer_chatbot.pdf
+
 ├── domain.yml
+
 ├── config.yml
+
 ├── credentials.yml
+
 ├── endpoints.yml
+
 ├── models
+
 ├── tests
+
 ├── results
+
 ├── candidates
+
 ├── venv
+
 └── README.md
+
 ```
