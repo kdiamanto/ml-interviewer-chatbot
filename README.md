@@ -263,9 +263,7 @@ The detailed presentation of this project can be found in the present repository
 
 │   └── university_data_collector.py
 
-├── presentations/
-
-│   └── ml_interviewer_chatbot.pdf
+├── Rasa_Chatbot_Interviewer_Presentation_Diamantopoulos.pdf
 
 ├── domain.yml
 
