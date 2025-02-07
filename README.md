@@ -244,7 +244,9 @@ The detailed presentation of this project can be found in the present repository
 ## Repository Structure
 ```
 ├── actions/
+
 │   └── actions.py
+
 ├── data/
 │   ├── nlu.yml
 │   ├── rules.yml
