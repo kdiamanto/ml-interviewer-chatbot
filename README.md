@@ -257,11 +257,11 @@ The detailed presentation of this project can be found in the present repository
 
 │   └── databases/
 
-│       └── university-courses-complete.json
+│        └── university-courses-complete.json
 
 ├── utils/
 
-│   └── university_data_collector.py
+│     └── university_data_collector.py
 
 ├── Rasa_Chatbot_Interviewer_Presentation_Diamantopoulos.pdf
 
