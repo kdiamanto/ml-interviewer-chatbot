@@ -51,6 +51,45 @@ The chatbot implements three main interview scenarios:
   - Adaptive response validation
   - Progressive difficulty adjustment
 
+## University Database Enrichment
+The project includes a dedicated utility for enriching the university course database:
+
+Location: utils/university_data_collector.py
+Purpose: Facilitates adding new universities and courses to the database
+Features:
+
+Support for both local and Google Colab environments
+Automated data validation
+Database statistics tracking
+Backup functionality
+Google Drive integration for Colab
+
+Using the Data Collector
+
+## 1. Local Usage
+from utils.university_data_collector import UniversityDataCollector
+
+# Initialize collector
+collector = UniversityDataCollector('data/databases/university-courses-complete.json')
+
+# Add new institution
+new_courses = [
+    {
+        'name': 'Advanced Machine Learning',
+        'level': 'Graduate',
+        'languages': ['Python', 'PyTorch'],
+        'type': 'NLP'
+    }
+]
+
+collector.add_institution(
+    country='Greece',
+    institution_name='Athens University of Economics and Business',
+    courses=new_courses
+)
+## 2. Google Colab Usage
+collector = UniversityDataCollector('path/to/database.json', use_colab=True)
+
 ## Implementation Challenges and Solutions
 
 1. **Challenge**: Managing Conversation Flow
@@ -212,6 +251,8 @@ The detailed presentation of this project can be found in the present repository
 │   ├── stories.yml
 │   └── databases/
 │       └── university-courses-complete.json
+├── utils/
+│   └── university_data_collector.py  # New utility for database enrichment
 ├── presentations/
 │   └── ml_interviewer_chatbot.pdf
 ├── domain.yml
